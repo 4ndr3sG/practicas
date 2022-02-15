@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+ <alumno>
+ <nombre>minombre</nombre>
+ <apellido>miapellido</apellido>
+ <ciclo>miclase</ciclo>
+ </alumno>
+</alumnos> 
