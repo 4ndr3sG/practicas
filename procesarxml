@@ -1,0 +1,39 @@
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+
+public class ProcesarXml2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		procesarArchivo("src\\ejemplosxml\\practica2.xml");
+	}
+	
+	private static void procesarArchivo(String nombreArchivo) {
+		
+		DocumentBuilderFactory fabrica;
+		DocumentBuilder constructor;
+		Document documentXML;
+		
+		
+		try {
+			File fichero = new File(nombreArchivo);
+			fabrica = DocumentBuilderFactory.newInstance();
+			System.out.println("procesando --->"+nombreArchivo);
+			
+			constructor=fabrica.newDocumentBuilder();
+			documentXML=constructor.parse(fichero);
+			//imprimimos por pantalla
+			ulilidades.imprimirXml(documentXML);
+			
+			
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		
+	}
+
+}
