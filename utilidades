@@ -1,0 +1,21 @@
+public class ulilidades {
+	
+	
+	public static void imprimirXml(Document document2print) 
+			throws TransformerConfigurationException, TransformerException {
+		
+		DOMSource domSource = new DOMSource(document2print);
+		StringWriter writer = new StringWriter();
+		StreamResult result = new StreamResult(writer);	
+		TransformerFactory tf = TransformerFactory.newInstance();	
+		Transformer transformer = tf.newTransformer();
+		transformer.transform(domSource, result);
+		
+		System.out.println("XML de (minombre) a String: \n" + writer.toString());
+		
+		
+		
+		
+	}
+
+}
